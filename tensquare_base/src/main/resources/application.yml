@@ -1,0 +1,23 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: tensquare-base
+
+  datasource: #中间隔个空格 bootstrap的优先级高
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.96.132:3306/tensquare_base?characterEncoding=utf-8
+    username: root
+    password: 123456
+
+jpa:
+  datasource: mysql
+  show-sql: true
+
+eureka:
+  client:
+    service-url: #Eureka客户端与Eureka服务端进行交互的地址
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer‐ip‐address: true #跨域
